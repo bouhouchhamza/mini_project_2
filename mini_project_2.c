@@ -4,16 +4,17 @@
 
 int main()
 {
-    int i , result = 0 , tentative = 10 ;
+    int  result = 0 , tentative = 10 , errors=0 ;
     char tab1[] = "youcode";
     char tab2[] = {'_','_','_','_','_','_','_','\0'};
     char letter ;
 
     printf("Mot caché : %s\n", tab2);
 
-
-    for(i=0;i<tentative;i++){
-            printf("tentative %d/%d \n entrer letter : ",i+1,tentative);
+    int i=0;
+    while(errors < tentative && strcmp(tab1, tab2) != 0){
+            printf("tentative %d  \n ",tentative-errors);
+            printf("Entrer une lettre : ");
             scanf(" %c",&letter);
 
             int j ;
@@ -25,21 +26,27 @@ int main()
                 }
                 }
      printf("Mot actuel : %s\n", tab2);
+     if(result == 0){
+            errors++;
+            printf(" Lettre incorrecte !\n");
+        } else {
+            printf(" Bonne lettre !\n");
+        }
 
      if(result==0){
-        printf("la lettre qui vous entree est incorect");
+        printf("la lettre qui vous entree est incorect \n");
      }
 
      if(strcmp(tab1,tab2) == 0){
         printf("felicitation vous aver trouver le mot : %s\n",tab1);
-        }
-     if(i== tentative - 1 && strcmp(tab1, tab2) != 0){
+     if(errors== tentative - 1 && strcmp(tab1, tab2) != 0){
         printf(" vous avez perdu ! Le mot était : %s\n", tab1);
      }
 
     }
 
 
+}
 
     return 0;
 }
