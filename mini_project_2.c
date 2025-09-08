@@ -13,7 +13,7 @@ int main()
 
 
     for(i=0;i<tentative;i++){
-            printf("tentative %d/%d \n - entrer letter : ",i+1,tentative);
+            printf("tentative %d/%d \n entrer letter : ",i+1,tentative);
             scanf(" %c",&letter);
 
             int j ;
@@ -33,7 +33,7 @@ int main()
      if(strcmp(tab1,tab2) == 0){
         printf("felicitation vous aver trouver le mot : %s\n",tab1);
         }
-     if(i==tentative-1 && strcmp((tab1,tab2)!=0)){
+     if(i== tentative - 1 && strcmp(tab1, tab2) != 0){
         printf(" vous avez perdu ! Le mot était : %s\n", tab1);
      }
 
