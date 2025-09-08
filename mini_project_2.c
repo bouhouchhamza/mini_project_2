@@ -28,7 +28,7 @@ int main()
 
         if(result == 0){
             errors++;
-            printf("Lettre incorrecte !\n");
+            printf("la Lettre %c est incorrecte !\n",letter);
         } else {
             printf("Bonne lettre !\n");
         }
